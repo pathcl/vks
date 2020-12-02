@@ -21,5 +21,4 @@ done
 
 
 # Master tls/crt replication 
-
-ansible -i hosts.ini -m shell -a 'curl -Lo /usr/bin/vks http://luis.sanmartin.io/vks; chmod a+x /usr/bin/vks' all
+ansible -i hosts.ini -m copy -a 'src=../vks dest=/usr/sbin/vks' all
