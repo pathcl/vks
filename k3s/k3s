@@ -1,3 +1,4 @@
-~/tmp/k3s server --disable-agent --disable-kube-proxy --disable-network-policy --disable coredns \
+#!/bin/bash
+~/tmp/k3s server --bind-address `hostname -I | awk '{print $1}'` --https-listen-port 6443 --disable-agent --disable-kube-proxy --disable-network-policy --disable coredns \
 --disable servicelb --disable traefik --disable-cloud-controller --disable local-storage \
 --disable metrics-server "$@"

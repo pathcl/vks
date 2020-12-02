@@ -22,3 +22,4 @@ done
 
 # Master tls/crt replication 
 ansible -i hosts.ini -m copy -a 'src=../vks dest=/usr/sbin/vks' all
+ansible -i hosts.ini -m shell -a 'chmod a+x /usr/sbin/vks' all
