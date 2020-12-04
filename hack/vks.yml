@@ -1,0 +1,8 @@
+---
+- hosts: vks01
+  gather_facts: no
+  # become_user: ubuntu
+  tasks:
+ 
+  - name: Start k3s
+    shell: nohup /home/ubuntu/go/src/github.com/pathcl/vks/k3s/k3s &
